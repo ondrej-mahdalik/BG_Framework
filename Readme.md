@@ -1,22 +1,37 @@
-// ScOoBY 03.05.2020
+# Broken Grenade Framework
+Framework určený pro Mission Makery z BG.
+Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi aktivátory.
 
-//Framework by mel jit spustit na jakemkoliv BG_preseru. 
-
-Zkopiruj slozku s frameworkem "BG_(verze).VR" do slozky C:\Users\tvuj_profil\Documents\Arma 3 - Other Profiles\tvuj_profil\missions\
-
-Otevri eden a zvol si mapu, na ktere chces postavit misi. Klikni nahore na panelu Scenario - Save as - a zvol jmeno sve mise napriklad "moje_mise" a uloz to.
-Klikni na Scenario - Open - zvol mapu Virtual Reality - zde uvidis save "BG_(verze)" otevri safe.
-Otevri mapu a zkopiruj vsechny entity na mape označením mysi a stiskem ctrl+c.
-Klikni na Scenario - Open - zvol mapu sveho savu - zde uvidis safe "moje_mise" otevri safe a stiskni ctrl-v.
-
-Zkopiruj do sve mise vsechny soubory krome "CBA.txt", "Navod pro pouziti CZR Utility.pdf", "mission.sqm", "Readme.txt,"
-Pokud nepouzijes tabuli s loadoutmi smaz i slozku "loadouts" a "pictures". Tabuli smaz i z mise.
-
-V souboru "initPlayerLocal.sqf" si muzes nastavit bezici text pri pripojeni na server. Dale si muzes nastavit maximalni dohled pro hrace pokud je pouzit mod ch_view_distance.
-
-V souboru "onPlayerRespawn.sqf" si muzes nastavit maximalni pocet respawnu. Defaulne je nastaveno 2, jeden pri pripojeni na server a druhy pri prvni smrti.
-
-Uprav si misi podle sebe a nepotrebne entity smaz.
-
-Pro spravne nahrani CBA je nutne zkopirovat cele nastaveni ze souboru "CBA.txt" stickem ctrl+a potom ctrl+c. Potom otevri svuj save mapy v eden editoru.
-Otevri addon options a klikni na tlacitko import. Stiskni ctrl+v a klikni na tlacitko Ok potom znovu tlacitko Ok nesmis kliknout na krizek. Potom klikni na liste Scenario a potom tlacitko Safe. Pro zkontrolovani ulozeni CBA stiskni tlacitko Scenario potom Open a nacti znovu svoji misi. Otevri znovu addon options a porovnej nastaveni ACE Medical se souborem CBA.txt  //ACE Medical. Jakmile nahraješ a spustis svoji misi na serveru nebo v CzR utilite znovu zkontroluj Addon Options. 
+## Použití
+ 1. Spusť Eden, vytvoř prázdnou misi na zvolené mapě a ulož ji.
+ 2. Zavři Eden (aby nebránil přepsání souborů).
+ 3. Do složky *Dokumenty\Arma 3\missions\\\<nazevTvojiMise\>* nakopíruj celý obsah archivu.
+ 4. Uprav nastavení frameworku podle tvých potřeb - soubor *nastaveni.sqf*.
+ 5. Znovu otevři svou misi v Edenu.
+ 6. Pokud se nejdená o misi na Moderně, uprav nastavení CBA (aktuální presety pro jednoduchý import najdeš níže nebo na Discordu v kanálu *#důležité*).
+ 7. Podle potřeby přesuň/uprav/smaž předspawnované jednotky/tabulky/arzenál.
+ 
+## Funkce Frameworku
+Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
+ - Nastavení hry pro správnou podporu TFAR
+ - Nastavení Artillery Computeru*
+ - Uvítací zprávy*
+ - Omezení počtu respawnů*
+ - Omezení dohledu*
+ - Vynucení zobrazení trávy*
+ - Tabulka s loadouty
+ - Podpora headless clientů
+ - Virtuální zeusové
+ - Fyzičtí zeusové
+ - Sloty pro hráče
+ - Nastavení garbage collectoru a dalších optimalizací
+ - Vlastní příkazy do chatu (další budou přidány v budoucnu)
+	 - *#hint \<text\>* - Zobrazí všem hráčům zprávu (může použít jen admin)
+## CBA
+|Název|Odkaz|
+|--|--|
+|Moderna|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/781540328686616596/CBA_MODERNA_GRIPEN_26.11.2020.txt)|
+|Moderna + KAT|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/799989370781696030/cba_KAT_160121.txt)|
+|WW2|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/781540353009516565/CBA_GRIPEN_WW2_26.11.2020.txt)|
+|Vietnam|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/781540389877841970/CBA_GRIPEN_VIETNAM_26.11.2020.txt)|
+|Warhammer40k|*Bude Doplněno*|
