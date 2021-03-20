@@ -29,6 +29,6 @@ _msg remoteExec["systemChat"];
 	};
 
 	[[
-		["BG Framework","align = 'center' size = '0.7' font='PuristaBold'"],["","<br/>"],["Version 03.05.2020","align = 'center' size = '0.7'","#aaaaaa"]
+		["BG Framework","align = 'center' size = '0.7' font='PuristaBold'"],["","<br/>"],["Verze 20. 3. 2021","align = 'center' size = '0.7'","#aaaaaa"]
 	]] spawn BIS_fnc_typeText2;
 };
