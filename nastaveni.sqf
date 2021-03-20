@@ -31,6 +31,7 @@ bg_splashMessage3 = "Neruš ostatní soundboardem nebo shit-talkem.";
 /** Pocet Respawnu
  * - Nove se nepocita uvodni pripojeni na server
  * - Nastaveni na 2 = hrac muze dvakrat zemrit, po treti skonci ve spectatorovi
+ * - Pro vypnuti nastav na -1
  */
 bg_respawnCount = 2;
 
