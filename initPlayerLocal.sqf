@@ -47,8 +47,4 @@ sleep 5;
 	
 };
 
-//Maximalni dohled pro mod CH_view_distance
-				
-		CHVD_allowNoGrass = false; // Set 'false' if you want to disable "Low" option for terrain (default: true)
-		CHVD_maxView = 5000; // Set maximum view distance (default: 12000)
-		CHVD_maxObj = 5000; // Set maximimum object view distance (default: 12000)
+	CHVD_allowNoGrass = false;

@@ -16,12 +16,3 @@ enableEngineArtillery true;
 ["hint", {
     [[(_this select 0)], "hint", true] call BIS_fnc_MP;
 }, "admin"] call CBA_fnc_registerChatCommand;
-
-
-
-// CzR 20200426
-// Zapnutí tretiho pohledu na pozici ridice.
-
-#include "3rd-view\plugin.inc"
-
-
