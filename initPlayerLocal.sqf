@@ -13,7 +13,7 @@ sleep 5;
  
 	_msg =  format ["Player %1 has joined the game. Welcome!",name player];
 	_msg = str _msg;
-	[_msg, "systemChat", true] call BIS_fnc_MP;
+	_msg remoteExec["systemChat"];
 
 	[] spawn
  		{ 
