@@ -3,13 +3,14 @@ Framework určený pro Mission Makery z BG.
 Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi aktivátory.
 
 ## Použití
- 1. Spusť Eden, vytvoř prázdnou misi na zvolené mapě a ulož ji.
- 2. Zavři Eden (aby nebránil přepsání souborů).
- 3. Do složky *Dokumenty\Arma 3\missions\\\<nazevTvojiMise\>* nakopíruj celý obsah archivu.
- 4. Uprav nastavení frameworku podle tvých potřeb - soubor *nastaveni.sqf*.
- 5. Znovu otevři svou misi v Edenu.
- 6. Pokud se nejdená o misi na Moderně, uprav nastavení CBA (aktuální presety pro jednoduchý import najdeš níže nebo na Discordu v kanálu *#důležité*).
- 7. Podle potřeby přesuň/uprav/smaž předspawnované jednotky/tabulky/arzenál.
+ 1. Stáhni si nejnovější verzi frameworku [zde](https://github.com/ondrej-mahdalik/BG_Framework/releases/latest).
+ 2. Spusť Eden, vytvoř prázdnou misi na zvolené mapě a ulož ji.
+ 3. Zavři Eden (aby nebránil přepsání souborů).
+ 4. Do složky *Dokumenty\Arma 3\missions\\\<nazevTvojiMise\>* nakopíruj celý obsah archivu.
+ 5. Uprav nastavení frameworku podle tvých potřeb - soubor *nastaveni.sqf*.
+ 6. Znovu otevři svou misi v Edenu.
+ 7. Pokud se nejdená o misi na Moderně, uprav nastavení CBA (aktuální presety pro jednoduchý import najdeš níže nebo na Discordu v kanálu *#důležité*).
+ 8. Podle potřeby přesuň/uprav/smaž předspawnované jednotky/tabulky/arzenál.
  
 ## Funkce Frameworku
 Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
