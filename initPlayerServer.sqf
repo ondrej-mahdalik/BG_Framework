@@ -1,5 +1,3 @@
-//ScOoBY Oprava 03.05.2020
- 
 {
 	if (!isnull (getassignedcuratorunit _x)) then {
 		_unit = getassignedcuratorunit _x;

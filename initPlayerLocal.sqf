@@ -1,50 +1,34 @@
-//Oprava ScOoBY	03.05.2020
+#include "nastaveni.sqf"
 
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
-private ["_infohrac","_infohracarr1","_infohracarr2","_msg","_zeusarr"];
-
-_infohrac = squadParams player;
- 
+CHVD_allowNoGrass = bg_forceGrass;
+CHVD_maxView = bg_maxView;
+CHVD_maxObj = bg_maxView;
 
 sleep 5;
 
-//Uvodni hint vlevo dole
- 
-	_msg =  format ["Player %1 has joined the game. Welcome!",name player];
-	_msg = str _msg;
-	_msg remoteExec["systemChat"];
+// Uvodni hint vlevo dole
+_msg =  format [bg_welcomeMessage, name player];
+_msg remoteExec["systemChat"];
 
-	[] spawn
- 		{ 
-		waitUntil {alive player};
+[] spawn {
 
-		sleep 5;
-        
-//Bezici text po pripojeni na server.
-        
-		[
-			[
-				["You are being synchronized with Broken Grenade’s server!", "<t align = 'center' shadow = '1' size = '0.7' font='PuristaBold'>%1</t><br/>"],
-				["Grab your gear and go stand in line with your squad at the flag.", "<t align = 'center' shadow = '1' size = '0.7' font='PuristaBold'>%1</t><br/>"],
-				["Please avoid shit talking and hot mics before leaving the base.", "<t align = 'center' shadow = '1' size = '0.7' font='PuristaBold'>%1</t><br/>"]
-			]
-		] 
+	waitUntil {alive player};
+	sleep 5;
 
-		spawn BIS_fnc_typeText;
+	// Bezici text po pripojeni na server.
+	if (bg_showSplashMessage) then {
+		[[
+			[bg_splashMessage1, "<t align = 'center' shadow = '1' size = '0.7' font='PuristaBold'>%1</t><br/>"],
+			[bg_splashMessage2, "<t align = 'center' shadow = '1' size = '0.7' font='PuristaBold'>%1</t><br/>"],
+			[bg_splashMessage3, "<t align = 'center' shadow = '1' size = '0.7' font='PuristaBold'>%1</t><br/>"]
+		]] spawn BIS_fnc_typeText;
 
 		sleep 30;
+	};
 
-		[
-			[
-
-			["BG Framework, ","align = 'center' size = '0.7' font='PuristaBold'"],["","<br/>"],["Version 03.05.2020","align = 'center' size = '0.7'","#aaaaaa"]
-			
-			]
-		] 
-		
-		spawn BIS_fnc_typeText2;
-	
+	[[
+		["BG Framework","align = 'center' size = '0.7' font='PuristaBold'"],["","<br/>"],["Version 03.05.2020","align = 'center' size = '0.7'","#aaaaaa"]
+	]] spawn BIS_fnc_typeText2;
 };
-
-	CHVD_allowNoGrass = false;
