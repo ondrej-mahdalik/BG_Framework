@@ -1,0 +1,40 @@
+//Dulezite nastaveni nemenit.
+disabledAI = 1;
+corpseManagerMode = 3;
+corpseLimit = 50;
+corpseRemovalMinTime = 15;
+corpseRemovalMaxTime = 60;
+wreckManagerMode = 3;
+wreckLimit = 15;
+wreckRemovalMinTime = 15;
+wreckRemovalMaxTime = 60;
+minPlayerDistance = 500;
+saving = 0;
+//onLoadMission="";
+//onLoadMissionTime=1;
+//class CfgMusic
+/*	{
+		tracks[]={};
+			class Track01
+			{
+			name = "";
+			sound[] = {"\sound\Jarhead.ogg", db+10, 1.0};
+			};
+	};
+class CfgSounds
+	{
+		sounds[] = {};
+			class Sound02
+			{
+			name = "Sound02";
+			sound[] = {"\sound\Sound02.ogg", 100, 1.0};
+			titles[] = {};
+			};
+			class Sound01
+			{
+			name = "Sound01";
+			sound[] = {"\sound\Sound01.ogg", 100, 1.0};
+			titles[] = {};
+			};
+	};
+*/
