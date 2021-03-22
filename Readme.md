@@ -1,6 +1,6 @@
 # Broken Grenade Framework
 Framework určený pro Mission Makery z BG.
-Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi aktivátory.
+Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi aktivátory používanými v BG.
 
 ## Použití
  1. Stáhni si nejnovější verzi frameworku [zde](https://github.com/ondrej-mahdalik/BG_Framework/releases/latest).
@@ -28,6 +28,11 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Nastavení garbage collectoru a dalších optimalizací
  - Vlastní příkazy do chatu (další budou přidány v budoucnu)
 	 - *#hint \<text\>* - Zobrazí všem hráčům zprávu (může použít jen admin)
+	 - *#spunty* - Přidá všem hráčům špunty (pokud na ně mají v intentáři místo)
+	 - *#give \<jmenoPolozky\>*- Přidá všem hráčům zvolenou položku.
+	 Funguje na všechny věci, které se dají dát do inventáře, tudíž i na zbraně (za podmínky že má hráč dostatek místa).
+	 Je potřeba použít pracovní název objektu, ten lze zobrazit např. v ACE arzenálu po najetí myší na položku (viz [obrázek](https://i.imgur.com/9iaoXDs.png))
+
 ## CBA
 |Název|Odkaz|
 |--|--|
