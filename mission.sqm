@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3592.8486,38.722652,3602.2385};
-		dir[]={-0.79509193,-0.54841787,0.25897229};
-		up[]={-0.52145463,0.83620447,0.16984488};
-		aside[]={0.30969974,0,0.95083445};
+		pos[]={3512.241,11.369668,3580.3276};
+		dir[]={-0.45181584,-0.33956903,0.82497734};
+		up[]={-0.1631221,0.9405731,0.29784673};
+		aside[]={0.87708968,5.3379335e-007,0.48035821};
 	};
 };
 binarizationWanted=0;
@@ -49614,10 +49614,33 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this addAction [""----GENERAL LOADOUTS----"", ""Nope.sqf""];     " \n "this addAction [""Squad Leader"", ""loadouts\squadLeader.sqf""];   " \n "this addAction [""Team Leader"", ""loadouts\teamLeader.sqf""];     " \n "this addAction [""Radio Technic Operator"", ""loadouts\rto.sqf""];    " \n "this addAction [""Combat Life Saver"", ""loadouts\combatLiveSaver.sqf""]; this addAction [""Medic"", ""loadouts\medic.sqf""];     " \n "this addAction [""Rifleman"", ""loadouts\rifleman.sqf""];    " \n "this addAction [""Rifleman AT"", ""loadouts\riflemanAT.sqf""];   " \n "this addAction [""Rifleman LightAT"", ""loadouts\riflemanLightAT.sqf""];  this addAction [""Grenadier"", ""loadouts\Grenadier.sqf""];  " \n "this addAction [""Machine Gunner"", ""loadouts\machineGunner.sqf""];   " \n "this addAction [""Auto Rifleman"", ""loadouts\autoRifleman.sqf""];    " \n "this addAction [""Marksman"", ""loadouts\marksman.sqf""];    " \n "this addAction [""Engineer"", ""loadouts\engineer.sqf""];  " \n "this addAction [""AmmoBearer"", ""loadouts\ammoBearer.sqf""];  " \n "this setObjectTextureGlobal [0,""pictures\gear.jpg""];}";
+				init="call{this addAction [""----GENERAL LOADOUTS----"", ""Nope.sqf""];     " \n "this addAction [""Squad Leader"", ""loadouts\squadLeader.sqf""];   " \n "this addAction [""Team Leader"", ""loadouts\teamLeader.sqf""];     " \n "this addAction [""Radio Technic Operator"", ""loadouts\rto.sqf""];    " \n "this addAction [""Combat Life Saver"", ""loadouts\combatLiveSaver.sqf""]; this addAction [""Medic"", ""loadouts\medic.sqf""];     " \n "this addAction [""Rifleman"", ""loadouts\rifleman.sqf""];    " \n "this addAction [""Rifleman AT"", ""loadouts\riflemanAT.sqf""];   " \n "this addAction [""Rifleman LightAT"", ""loadouts\riflemanLightAT.sqf""];  this addAction [""Grenadier"", ""loadouts\Grenadier.sqf""];  " \n "this addAction [""Machine Gunner"", ""loadouts\machineGunner.sqf""];   " \n "this addAction [""Auto Rifleman"", ""loadouts\autoRifleman.sqf""];    " \n "this addAction [""Marksman"", ""loadouts\marksman.sqf""];    " \n "this addAction [""Engineer"", ""loadouts\engineer.sqf""];  " \n "this addAction [""AmmoBearer"", ""loadouts\ammoBearer.sqf""];  }";
 			};
 			id=743;
 			type="SignAd_Sponsor_Redburger_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="pictures\gear.jpg";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item38
 		{
@@ -49630,8 +49653,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{[this, true] call ace_arsenal_fnc_initBox; " \n "[Box_1,[""%All""],true] call BIS_fnc_addVirtualItemCargo; " \n "[Box_1,[""%All""],true] call BIS_fnc_addVirtualMagazineCargo; " \n "[Box_1,[""%All""],true] call BIS_fnc_addVirtualWeaponCargo; " \n "[Box_1,[""%All""],true] call BIS_fnc_addVirtualBackpackCargo;}";
-				name="Box_1";
 			};
 			id=747;
 			type="Box_NATO_Equip_F";
@@ -49680,7 +49701,7 @@ class Mission
 												"STRING"
 											};
 										};
-										value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										value="";
 									};
 								};
 								class Item2
@@ -49694,7 +49715,7 @@ class Mission
 												"STRING"
 											};
 										};
-										value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										value="";
 									};
 								};
 								class Item3
@@ -49843,6 +49864,25 @@ class Mission
 				};
 				class Attribute1
 				{
+					property="ENH_virtualArsenal";
+					expression="if (!is3DEN && _value) then {['AmmoboxInit', [_this, true]] spawn BIS_fnc_arsenal}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
 					property="ammoBox";
 					expression="[_this,_value] call bis_fnc_initAmmoBox;";
 					class Value
@@ -49860,7 +49900,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute2
+				class Attribute3
 				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
@@ -49879,7 +49919,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute3
+				class Attribute4
 				{
 					property="ace_cookoff_enableAmmoCookoff";
 					expression="if !(_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true];};";
@@ -49898,7 +49938,56 @@ class Mission
 						};
 					};
 				};
-				nAttributes=4;
+				class Attribute5
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=1;
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=6;
 			};
 		};
 		class Item39
