@@ -10,5 +10,17 @@ enableEngineArtillery bg_artilleryComputer;
 
 // Prikaz #hint
 ["hint", {
-    [_this select 0] remoteExec ["hint"];
-}, "admin"] call CBA_fnc_registerChatCommand;
+    [_this select 0] remoteExec ["hint", 2];
+}] call CBA_fnc_registerChatCommand;
+
+// Prikaz #spunty
+["spunty", {
+    {player addItem "ACE_EarPlugs";} remoteExec["call", 2];
+}] call CBA_fnc_registerChatCommand;
+
+// Prikaz #give
+["give", {
+    bg_itemToGive = _this select 0;
+    publicVariable "bg_itemToGive";
+    {player addItem bg_itemToGive;} remoteExec["call", 2];
+}] call CBA_fnc_registerChatCommand;
