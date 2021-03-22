@@ -14,6 +14,7 @@
  * - Zobrazi se vsem v chatu pri pripojeni hrace
  * - %1 bude nahrazeno jmenem hrace - NEODSTRANOVAT
  */
+bg_showWelcomeMessage = true;
 bg_welcomeMessage = "Hráč %1 se připojil do hry!";
 
 

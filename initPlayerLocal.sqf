@@ -9,8 +9,10 @@ CHVD_maxObj = bg_maxView;
 sleep 5;
 
 // Uvodni hint vlevo dole
-_msg =  format [bg_welcomeMessage, name player];
-_msg remoteExec["systemChat"];
+if (bg_showWelcomeMessage) then {
+	_msg =  format [bg_welcomeMessage, name player];
+	_msg remoteExec["systemChat"];
+};
 
 [] spawn {
 
