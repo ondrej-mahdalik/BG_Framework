@@ -11,7 +11,7 @@ sleep 5;
 // Uvodni hint vlevo dole
 if (bg_showWelcomeMessage) then {
 	_msg =  format [bg_welcomeMessage, name player];
-	_msg remoteExec["systemChat", 2];
+	_msg remoteExec["systemChat"];
 };
 
 [] spawn {
