@@ -11,7 +11,7 @@ sleep 5;
 // Uvodni hint vlevo dole
 if (bg_showWelcomeMessage) then {
 	_msg =  format [bg_welcomeMessage, name player];
-	_msg remoteExec["systemChat"];
+	_msg remoteExec["systemChat", 2];
 };
 
 [] spawn {
@@ -31,6 +31,6 @@ if (bg_showWelcomeMessage) then {
 	};
 
 	[[
-		["BG Framework","align = 'center' size = '0.7' font='PuristaBold'"],["","<br/>"],["Verze 20. 3. 2021","align = 'center' size = '0.7'","#aaaaaa"]
+		["BG Framework","align = 'center' size = '0.7' font='PuristaBold'"],["","<br/>"],[["Verze", bg_version] joinString " ","align = 'center' size = '0.7'","#aaaaaa"]
 	]] spawn BIS_fnc_typeText2;
 };
