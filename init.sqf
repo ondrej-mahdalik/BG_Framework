@@ -24,3 +24,8 @@ enableEngineArtillery bg_artilleryComputer;
     publicVariable "bg_itemToGive";
     {player addItem bg_itemToGive;} remoteExec["call"];
 }] call CBA_fnc_registerChatCommand;
+
+// Prikaz #heal
+["heal", {
+    {[player] call ACE_medical_treatment_fnc_fullHealLocal;} remoteExec["call"];
+}] call CBA_fnc_registerChatCommand;

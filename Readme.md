@@ -26,12 +26,13 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Fyzičtí zeusové
  - Sloty pro hráče
  - Nastavení garbage collectoru a dalších optimalizací
- - Vlastní příkazy do chatu (další budou přidány v budoucnu)
-	 - *#hint \<text\>* - Zobrazí všem hráčům zprávu (může použít jen admin)
+ - Vlastní příkazy do chatu (může je požívat jen admin - #login)
+	 - *#hint \<text\>* - Zobrazí všem hráčům zprávu
 	 - *#spunty* - Přidá všem hráčům špunty (pokud na ně mají v intentáři místo)
 	 - *#give \<jmenoPolozky\>*- Přidá všem hráčům zvolenou položku.<br>
 	 Funguje na všechny věci, které se dají dát do inventáře, tudíž i na zbraně (za podmínky že má hráč dostatek místa).<br>
 	 Je potřeba použít pracovní název objektu, ten lze zobrazit např. v ACE arzenálu po najetí myší na položku (viz [obrázek](https://i.imgur.com/9iaoXDs.png))
+	 - *#heal* - Dá heal všem hráčům
 
 ## CBA
 |Název|Odkaz|
