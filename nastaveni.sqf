@@ -49,9 +49,3 @@ bg_maxView = 12000;
  * - true vynuti zobrazeni travy, false umozni hraci snizit si detaily hry na minimum a vypnout travu
  */
 bg_forceGrass = true;
-
-
-/** Artillery Computer
- * - true pro povoleni, false pro zakazani
- */
- bg_artilleryComputer = false;
