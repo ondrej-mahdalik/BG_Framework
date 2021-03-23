@@ -15,7 +15,6 @@ Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi
 ## Funkce Frameworku
 Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Nastavení hry pro správnou podporu TFAR
- - Nastavení Artillery Computeru*
  - Uvítací zprávy*
  - Omezení počtu respawnů*
  - Omezení dohledu*
