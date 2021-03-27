@@ -28,3 +28,8 @@ enableRadio false;
 ["heal", {
     {[player] call ACE_medical_treatment_fnc_fullHealLocal;} remoteExec["call"];
 }] call CBA_fnc_registerChatCommand;
+
+// Prikaz #nofortnite
+["nofortnite", {
+    {player removeItems "ACE_Fortify";} remoteExec["call"];
+}] call CBA_fnc_registerChatCommand;
