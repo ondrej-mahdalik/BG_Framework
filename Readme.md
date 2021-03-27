@@ -18,6 +18,7 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Uvítací zprávy*
  - Omezení počtu respawnů*
  - Omezení dohledu*
+ - Funkční světlice (zatím jen podpora granátometných světlic z vanilly a RHS)*
  - Vynucení zobrazení trávy*
  - Tabulka s loadouty
  - Podpora headless clientů
