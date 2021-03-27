@@ -2,9 +2,20 @@
 
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
+// Dohled
 CHVD_allowNoGrass = bg_forceGrass;
 CHVD_maxView = bg_maxView;
 CHVD_maxObj = bg_maxView;
+
+// Svetlice
+if (bg_useFlaresFix) then {
+	player addEventHandler [
+		"Fired",
+		{
+			[[_this select 6],"flareFix.sqf"] remoteExec ["execVM", 0, true];
+		}
+	];
+};
 
 sleep 5;
 
