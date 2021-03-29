@@ -18,10 +18,9 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Uvítací zprávy*
  - Omezení počtu respawnů*
  - Omezení dohledu*
- - Funkční světlice (zatím jen podpora granátometných světlic z vanilly a RHS)*
+ - Funkční světlice (podpora většiny světlic ze všech našich modpacků), další info níže*
  - Vynucení zobrazení trávy*
  - Tabulka s loadouty
- - Podpora headless clientů
  - Virtuální zeusové
  - Fyzičtí zeusové
  - Sloty pro hráče
@@ -33,6 +32,18 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
 	 Funguje na všechny věci, které se dají dát do inventáře, tudíž i na zbraně (za podmínky že má hráč dostatek místa).<br>
 	 Je potřeba použít pracovní název objektu, ten lze zobrazit např. v ACE arzenálu po najetí myší na položku (viz [obrázek](https://i.imgur.com/9iaoXDs.png))
 	 - *#heal* - Dá heal všem hráčům
+
+### Světlice
+Granátometné světlice fungují při aktivaci skriptu (v nastaveni.sqf) automaticky, pro podporu minometu je v edenu do initu daného minometu potřeba vložit následující kód:
+```SQF
+this addEventHandler [
+	"Fired",
+	{
+		[[_this select 6], "flareFix.sqf"] remoteExec ["execVM", -2];
+	}
+];
+```
+*Pozn. Skript pro minomety nefunguje v lokálním MP, je to dáno tím, že server je zároveň klientem.*
 
 ## CBA
 |Název|Odkaz|
