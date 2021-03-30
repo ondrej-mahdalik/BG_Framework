@@ -6,10 +6,10 @@ private["_bg_flareIntensity", "_bg_flareRange", "_bg_flareMortarIntensity", "_bg
 if (!hasInterface) exitWith {};
 
 /** Obecne Nastaveni Intenzity a Vzdalenosti */
-_bg_flareIntensity = 30;
+_bg_flareIntensity = 25;
 _bg_flareRange = 200;
-_bg_flareMortarIntensity = 100;
-_bg_flareMortarRange = 800;
+_bg_flareMortarIntensity = 50;
+_bg_flareMortarRange = 500;
 
 /** Druhy a Barvy Svetlic
  * - Pro pridani vlastni svetlice pridat ["<NazevSvetlice>", <barvaSvetlice>, <minomet>]
@@ -44,9 +44,9 @@ _bg_flareTypes = [
 	["ACE_40mm_Flare_yellow", 2, false], // Tato mozna neexistuje
 
 	// WW2
-	["CSA38_2inch_illum", 4, true],
 	["fow_Sh_60mm_02_ILL", 4, true],
 	["fow_Sh_81mm_type97_ILL", 4, true],
+	["CSA38_2inch_illum", 0, false],
 	["B_NORTH_Flare_green", 3, false],
 	["B_NORTH_Flare_red", 1, false],
 	["B_NORTH_Flare_White", 0, false],
