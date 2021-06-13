@@ -3,7 +3,7 @@ Framework určený pro Mission Makery z BG.
 Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi aktivátory používanými v BG.
 
 ## Použití
- 1. Stáhni si nejnovější verzi frameworku [zde](https://github.com/ondrej-mahdalik/BG_Framework/releases/latest).
+ 1. **Stáhni si nejnovější verzi frameworku [zde](https://github.com/ondrej-mahdalik/BG_Framework/releases/latest).**
  2. Spusť Eden, vytvoř prázdnou misi na zvolené mapě a ulož ji.
  3. Zavři Eden (aby nebránil přepsání souborů).
  4. Do složky *Dokumenty\Arma 3\missions\\\<nazevTvojiMise\>* nakopíruj celý obsah archivu.
