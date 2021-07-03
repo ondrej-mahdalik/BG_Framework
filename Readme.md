@@ -12,6 +12,15 @@ Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi
  7. Pokud se nejdená o misi na Moderně, uprav nastavení CBA (aktuální presety pro jednoduchý import najdeš níže nebo na Discordu v kanálu *#důležité*).
  8. Podle potřeby přesuň/uprav/smaž předspawnované jednotky/tabulky/arzenál.
  
+## CBA
+|Název|Odkaz|
+|--|--|
+|Moderna|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416558548811776/CBA_GRIPEN_MODERNA_7.5.2021.txt)|
+|Moderna + KAT|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416562022481960/CBA_GRIPEN_WW2_7.5.2021.txt)|
+|WW2|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416562022481960/CBA_GRIPEN_WW2_7.5.2021.txt)|
+|Vietnam|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416560336633876/CBA_GRIPEN_VIETNAM_7.5.2021.txt)|
+|Warhammer40k|*Bude Doplněno*|
+ 
 ## Funkce Frameworku
 Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Nastavení hry pro správnou podporu TFAR
@@ -44,12 +53,3 @@ this addEventHandler [
 ];
 ```
 *Pozn. Skript pro minomety nefunguje v lokálním MP, je to dáno tím, že server je zároveň klientem.*
-
-## CBA
-|Název|Odkaz|
-|--|--|
-|Moderna|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/781540328686616596/CBA_MODERNA_GRIPEN_26.11.2020.txt)|
-|Moderna + KAT|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/799989370781696030/cba_KAT_160121.txt)|
-|WW2|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/781540353009516565/CBA_GRIPEN_WW2_26.11.2020.txt)|
-|Vietnam|[Stáhnout](https://cdn.discordapp.com/attachments/611968501938257920/781540389877841970/CBA_GRIPEN_VIETNAM_26.11.2020.txt)|
-|Warhammer40k|*Bude Doplněno*|
