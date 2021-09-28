@@ -49,3 +49,9 @@ bg_maxView = 12000;
  * - true vynuti zobrazeni travy, false umozni hraci snizit si detaily hry na minimum a vypnout travu
  */
 bg_forceGrass = true;
+
+/** Nastavení jednotek v bezvedomi jako civilistu
+ * - Nastavi jednotky (hrace i AI) jako civilisty pokud padnou do bezvedomi.
+ * - AI diky tomu nebudou do hracu v bezvedomi strilet.
+ */
+ bg_civilianWhenUnconscious = true;
