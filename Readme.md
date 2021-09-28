@@ -27,7 +27,6 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Uvítací zprávy*
  - Omezení počtu respawnů*
  - Omezení dohledu*
- - Funkční světlice (podpora většiny světlic ze všech našich modpacků), další info níže*
  - Vynucení zobrazení trávy*
  - Tabulka s loadouty
  - Virtuální zeusové
@@ -35,21 +34,10 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Sloty pro hráče
  - Nastavení garbage collectoru a dalších optimalizací
  - Vlastní příkazy do chatu (může je požívat jen admin - #login)
-	 - *#hint \<text\>* - Zobrazí všem hráčům zprávu
-	 - *#spunty* - Přidá všem hráčům špunty (pokud na ně mají v intentáři místo)
+	 - *#hint \<text\>* - Zobrazí všem hráčům zprávu.
+	 - *#spunty* - Přidá všem hráčům špunty (pokud na ně mají v intentáři místo).
 	 - *#give \<jmenoPolozky\>*- Přidá všem hráčům zvolenou položku.<br>
 	 Funguje na všechny věci, které se dají dát do inventáře, tudíž i na zbraně (za podmínky že má hráč dostatek místa).<br>
-	 Je potřeba použít pracovní název objektu, ten lze zobrazit např. v ACE arzenálu po najetí myší na položku (viz [obrázek](https://i.imgur.com/9iaoXDs.png))
-	 - *#heal* - Dá heal všem hráčům
-
-### Světlice
-Granátometné světlice fungují při aktivaci skriptu (v nastaveni.sqf) automaticky, pro podporu minometu je v edenu do initu daného minometu potřeba vložit následující kód:
-```SQF
-this addEventHandler [
-	"Fired",
-	{
-		[[_this select 6], "flareFix.sqf"] remoteExec ["execVM", -2];
-	}
-];
-```
-*Pozn. Skript pro minomety nefunguje v lokálním MP, je to dáno tím, že server je zároveň klientem.*
+	 Je potřeba použít pracovní název objektu, ten lze zobrazit např. v ACE arzenálu po najetí myší na položku (viz [obrázek](https://i.imgur.com/9iaoXDs.png)).
+	 - *#heal* - Dá heal všem hráčům.
+	 - *#nofortnite* - Odebere všem hráčům Fortify tool.
