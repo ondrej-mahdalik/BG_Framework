@@ -6,7 +6,7 @@
  * Nemen nazvy promennych!
  * Text davej vzdy do uvozovek "" a nemen typ promennych (kdyz je vychozi hodnota text, tak textem musi zustat atd.)!
  */
-bg_version = "22. 3. 2021";
+bg_version = "28. 9. 2021";
 
 
 
@@ -50,6 +50,8 @@ bg_maxView = 12000;
  */
 bg_forceGrass = true;
 
-/** Oprava Svetlic
-* - Svetlice opravdu osviti oblast. */
-bg_useFlaresFix = true;
+/** Nastavení jednotek v bezvedomi jako civilistu
+ * - Nastavi jednotky (hrace i AI) jako civilisty pokud padnou do bezvedomi.
+ * - AI diky tomu nebudou do hracu v bezvedomi strilet.
+ */
+ bg_civilianWhenUnconscious = true;
