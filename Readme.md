@@ -15,9 +15,9 @@ Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi
 ## CBA
 |Název|Odkaz|
 |--|--|
-|Moderna|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416558548811776/CBA_GRIPEN_MODERNA_7.5.2021.txt)|
-|Moderna + KAT|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/877629431961776208/CBA_BG_KAT_18082021.txt)|
-|WW2|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416562022481960/CBA_GRIPEN_WW2_7.5.2021.txt)|
+|Moderna|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/898568272415424563/CBA_GRIPEN_MODERNA_15.10.2021.txt)|
+|Moderna + KAT (Neaktuální)|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/877629431961776208/CBA_BG_KAT_18082021.txt)|
+|WW2|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/898568269831733298/CBA_GRIPEN_WW2_15.10.2021.txt)|
 |Vietnam|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416560336633876/CBA_GRIPEN_VIETNAM_7.5.2021.txt)|
 |Warhammer40k|*Bude Doplněno*|
  
