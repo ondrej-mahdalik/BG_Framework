@@ -9,7 +9,7 @@ Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi
  4. Do složky *Dokumenty\Arma 3\missions\\\<nazevTvojiMise\>* nakopíruj celý obsah archivu.
  5. Uprav nastavení frameworku podle tvých potřeb - soubor *nastaveni.sqf*.
  6. Znovu otevři svou misi v Edenu.
- 7. Pokud se nejdená o misi na Moderně, uprav nastavení CBA (aktuální presety pro jednoduchý import najdeš níže nebo na Discordu v kanálu *#důležité*).
+ 7. Uprav nastavení CBA (aktuální presety pro jednoduchý import najdeš níže nebo na Discordu v kanálu *#changelog*).
  8. Podle potřeby přesuň/uprav/smaž předspawnované jednotky/tabulky/arzenál.
  
 ## CBA
