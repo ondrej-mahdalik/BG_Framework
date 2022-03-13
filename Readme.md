@@ -1,5 +1,5 @@
 # Broken Grenade Framework
-Framework určený pro Mission Makery z BG.
+Framework primárně určený pro Mission Makery z BG.
 Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi aktivátory používanými v BG.
 
 ## Použití
@@ -15,11 +15,10 @@ Poskytuje základní nastavení pro správnou funkčnost mise, funguje se všemi
 ## CBA
 |Název|Odkaz|
 |--|--|
-|Moderna|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/898568272415424563/CBA_GRIPEN_MODERNA_15.10.2021.txt)|
-|Moderna + KAT (Neaktuální)|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/877629431961776208/CBA_BG_KAT_18082021.txt)|
-|WW2|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/898568269831733298/CBA_GRIPEN_WW2_15.10.2021.txt)|
-|Vietnam|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/855416560336633876/CBA_GRIPEN_VIETNAM_7.5.2021.txt)|
-|Warhammer40k|*Bude Doplněno*|
+|Moderna|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/948254536265523250/CBA_Gripen_Moderna_1.3.2022.txt)|
+|Moderna + KAT|[Stáhnout](https://cdn.discordapp.com/attachments/950801652762415205/952680591021723748/CBA_Moderna_KAT_1.3.2022.txt)|
+|WW2|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/948254536043200582/CBA_Gripen_WW2_1.3.2022.txt)|
+|Vietnam|[Stáhnout](https://cdn.discordapp.com/attachments/840184628203356160/948254535854489610/CBA_Gripen_Vietnam_1.3.2022.txt)|
  
 ## Funkce Frameworku
 Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
@@ -28,10 +27,10 @@ Funkce s * na konci lze přizpůsobit v *nastaveni.sqf*.
  - Omezení počtu respawnů*
  - Omezení dohledu*
  - Vynucení zobrazení trávy*
- - Tabulka s loadouty
  - Virtuální zeusové
  - Fyzičtí zeusové
  - Sloty pro hráče
+ - Podpora headless klientů
  - Nastavení garbage collectoru a dalších optimalizací
  - Vlastní příkazy do chatu (může je požívat jen admin - #login)
 	 - *#hint \<text\>* - Zobrazí všem hráčům zprávu.
