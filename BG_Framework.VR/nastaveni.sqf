@@ -6,7 +6,7 @@
  * Nemen nazvy promennych!
  * Text davej vzdy do uvozovek "" a nemen typ promennych (kdyz je vychozi hodnota text, tak textem musi zustat atd.)!
  */
-bg_version = "28. 9. 2021";
+bg_version = "13. 3. 2021";
 
 
 
