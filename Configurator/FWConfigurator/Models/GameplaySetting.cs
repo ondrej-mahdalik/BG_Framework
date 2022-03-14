@@ -1,3 +1,3 @@
 ﻿namespace FWConfigurator.Models;
 
-public record GameplaySetting(int respawnCount, int maxView, bool forceGrass, bool civilianWhenUnconscious);
+public record GameplaySetting(int RespawnCount, int MaxView, bool ForceGrass, bool CivilianWhenUnconscious);

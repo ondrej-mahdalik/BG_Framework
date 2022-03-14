@@ -1,3 +1,3 @@
 ﻿namespace FWConfigurator.Models;
 
-public record WelcomeMessageSetting();
+public record WelcomeMessageSetting(bool ShowWelcomeMessage, string WelcomeMessage);

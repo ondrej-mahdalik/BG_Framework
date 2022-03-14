@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace FWConfigurator.Models
 {
-    public record SettingsFile
-    {
-
-    }
+    public record SettingsFile(WelcomeMessageSetting WelcomeMessageSetting, SplashMessageSetting SplashMessageSetting,
+        GameplaySetting GameGameplaySetting);
 }

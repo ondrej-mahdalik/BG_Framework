@@ -2,9 +2,37 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.22000.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <FileVersion></FileVersion>
+    <ApplicationIcon>bg_logo.ico</ApplicationIcon>
+    <DebugType>none</DebugType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bg_logo.ico" />
+    <None Remove="bg_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bg_logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.0.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FWConfigurator\FWConfigurator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bg_logo.ico" />
+    <Resource Include="bg_logo.png" />
+  </ItemGroup>
 
 </Project>

@@ -3,10 +3,211 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FWConfigurator.GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="BG Framework Konfigurátor"
+        Height="600"
+        MinHeight="450"
+        Width="800"
+        MinWidth="600"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Icon="/bg_logo.png">
+    <materialDesign:DialogHost SnackbarMessageQueue="{Binding ElementName=mainSnackbar, Path=MessageQueue}">
+        <materialDesign:DialogHost.DialogContent>
+            <StackPanel x:Name="dialogContent">
+                <TextBlock Margin="20px"
+                           Style="{StaticResource MaterialDesignHeadline6TextBlock}">Byla zjištěna chyba</TextBlock>
+                <TextBlock x:Name="txt_errorText"
+                           Margin="20px"
+                           Style="{StaticResource MaterialDesignBody1TextBlock}">chyba</TextBlock>
+                <Button x:Name="btn_acknowledgeError"
+                        Margin="20px"
+                        Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        Click="AcknowledgeError"
+                        Tag="false">OK</Button>
+            </StackPanel>
+        </materialDesign:DialogHost.DialogContent>
+        <Grid MaxHeight="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=ActualHeight}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*"/>
+                <RowDefinition  Height="55"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <TextBlock x:Name="WindowHeading"
+                           Margin="20px 20px 20px 0px"
+                           Style="{StaticResource MaterialDesignHeadline5TextBlock}">BG Framework</TextBlock>
+                <TextBlock x:Name="HeadingTitle"
+                           Margin="20px 10px"
+                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}">Generátor nastavení</TextBlock>
+                <TextBlock x:Name="HeadingDescription"
+                           Margin="20px 10px"
+                           Style="{StaticResource MaterialDesignBody1TextBlock}"
+                           TextWrapping="Wrap">Tato aplikace vygeneruje podle zadaných hodnot soubor nastaveni.sqf, který používá BG Framework.</TextBlock>
+            </StackPanel>
+            <ScrollViewer Grid.Row="1"
+                          x:Name="ScrollViewer"
+                          VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <materialDesign:Card Margin="20px 10px"
+                                         Padding="10px">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock Margin="10px"
+                                       Style="{StaticResource MaterialDesignHeadline6TextBlock}">Uvítací zpráva</TextBlock>
+                            <StackPanel Grid.Row="1"
+                                        Orientation="Vertical">
+                                <TextBlock Margin="10px"
+                                           Style="{StaticResource MaterialDesignCaptionTextBlock}">Zpráva, která se zobrazí v chatu po připojení hráče do hry.</TextBlock>
+                                <CheckBox x:Name="checkBox_WelcomeMessage"
+                                          IsEnabled="True"
+                                          Margin="10px"
+                                          Style="{StaticResource MaterialDesignCheckBox}"
+                                          Checked="CheckBox_Checked"
+                                          Unchecked="CheckBox_Checked">Zobrazit uvítací zprávu</CheckBox>
+                                <TextBox x:Name="txt_WelcomeMessage"
+                                         materialDesign:HintAssist.Hint="Text uvítací zprávy. %1 se nahradí jménem hráče."
+                                         Margin="10px"
+                                         Style="{StaticResource MaterialDesignTextBox}"></TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="20px 10px"
+                                         Padding="10px">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock Margin="10px"
+                                       Style="{StaticResource MaterialDesignHeadline6TextBlock}">Zpráva pro hráče</TextBlock>
+                            <StackPanel Grid.Row="1"
+                                        Orientation="Vertical">
+                                <TextBlock Margin="10px"
+                                           Style="{StaticResource MaterialDesignCaptionTextBlock}">Zpráva, která se zobrazí hráči po připojení do hry.</TextBlock>
+                                <CheckBox x:Name="checkBox_SplashMessage"
+                                          IsChecked="True"
+                                          Margin="10px"
+                                          Style="{StaticResource MaterialDesignCheckBox}"
+                                          Checked="CheckBox_Checked"
+                                          Unchecked="CheckBox_Checked">Zobrazit zprávu pro hráče</CheckBox>
+                                <TextBox x:Name="txt_SplashMessage1"
+                                         materialDesign:HintAssist.Hint="1. řádek zprávy"
+                                         Margin="10px"
+                                         Style="{StaticResource MaterialDesignTextBox}"></TextBox>
+                                <TextBox x:Name="txt_SplashMessage2"
+                                         materialDesign:HintAssist.Hint="2. řádek zprávy"
+                                         Margin="10px"
+                                         Style="{StaticResource MaterialDesignTextBox}"></TextBox>
+                                <TextBox x:Name="txt_SplashMessage3"
+                                         materialDesign:HintAssist.Hint="3. řádek zprávy"
+                                         Margin="10px"
+                                         Style="{StaticResource MaterialDesignTextBox}"></TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="20px 10px"
+                                         Padding="10px">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock Margin="10px"
+                                       Style="{StaticResource MaterialDesignHeadline6TextBlock}">Respawny</TextBlock>
+                            <StackPanel Grid.Row="1"
+                                        Orientation="Vertical">
+                                <CheckBox x:Name="checkBox_LimitRespawn"
+                                          Margin="10px"
+                                          IsChecked="True"
+                                          Style="{StaticResource MaterialDesignCheckBox}"
+                                          Checked="CheckBox_Checked"
+                                          Unchecked="CheckBox_Checked">Omezit počet respawnů</CheckBox>
+                                <Label Style="{StaticResource MaterialDesignLabel}">Počet respawnů</Label>
+                                <Slider x:Name="slider_RespawnCount"
+                                        Margin="10px"
+                                        Minimum="0"
+                                        Maximum="10"
+                                        Value="3"
+                                        IsEnabled="True"
+                                        Style="{StaticResource MaterialDesignDiscreteHorizontalSlider}"></Slider>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="20px 10px"
+                                         Padding="10px">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock Margin="10px"
+                                       Style="{StaticResource MaterialDesignHeadline6TextBlock}">Dohled a kvalita terénu</TextBlock>
+                            <StackPanel Grid.Row="1"
+                                        Orientation="Vertical">
+                                <Label Style="{StaticResource MaterialDesignLabel}">Maximální dohled</Label>
+                                <Slider x:Name="slider_MaxView"
+                                        Margin="10px"
+                                        Minimum="1000"
+                                        Maximum="12000"
+                                        Value="12000"
+                                        IsEnabled="True"
+                                        Style="{StaticResource MaterialDesignDiscreteHorizontalSlider}"></Slider>
+                                <CheckBox x:Name="checkBox_forceGrass"
+                                          Margin="10px"
+                                          IsChecked="True"
+                                          Style="{StaticResource MaterialDesignCheckBox}">Vynutit zobrazení trávy</CheckBox>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card Margin="20px 10px"
+                                         Padding="10px">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBlock Margin="10px"
+                                       Style="{StaticResource MaterialDesignHeadline6TextBlock}">Ostatní nastavení</TextBlock>
+                            <StackPanel Grid.Row="1"
+                                        Orientation="Vertical">
+                                <CheckBox x:Name="checkBox_civilianWhenUnconscious"
+                                          Margin="10px"
+                                          IsChecked="True"
+                                          Style="{StaticResource MaterialDesignCheckBox}">Přepnout hráče v bezvědomí na civilistu</CheckBox>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </StackPanel>
+            </ScrollViewer>
+            <StackPanel Grid.Row="2" x:Name="ButtonsPanel"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+                <Button x:Name="btn_Reset"
+                        HorizontalAlignment="Right"
+                        Margin="10px"
+                        Style="{StaticResource MaterialDesignFlatButton}"
+                        Click="SetDefaultValues">Obnovit výchozí</Button>
+                <Button x:Name="btn_Save"
+                        HorizontalAlignment="Right"
+                        Margin="10px"
+                        Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                        Click="BtnSaveChangesClick"
+                        Cursor="Hand">Vygenerovat soubor</Button>
+            </StackPanel>
+            <materialDesign:Snackbar Grid.Row="2" x:Name="mainSnackbar"
+                                     MessageQueue="{materialDesign:MessageQueue}" />
+        </Grid>
+    </materialDesign:DialogHost>
 
-    </Grid>
 </Window>
